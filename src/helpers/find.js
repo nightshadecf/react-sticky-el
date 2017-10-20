@@ -37,7 +37,7 @@ export default function find(selector, el) {
 
   // eslint-disable-next-line no-cond-assign
   while (el = el.parentElement) {
-    if (el[matchesMethodName](selector)) {
+    if (el.querySelector(selector)) {
       return el;
     }
   }
